@@ -22,11 +22,6 @@ lineReader.on('line', function (line) {
       lvl[tokens[2]] = { };
       lvl = lvl[tokens[2]];
       step = 2;
-      // if (!_.isEmpty(tokens[3])) {
-      //   lvl.rodz[tokens[3]] = {};
-      //   lvl = lvl.rodz[tokens[3]];
-      //   step = 3;
-      // }
     }
   }
 
@@ -38,14 +33,9 @@ lineReader.on('line', function (line) {
   db = _.merge(db, a);
 });
 
-lineReader.on('close', function () {
-  // console.log(JSON.stringify(db, 0, 2));
-})
-
 var lineReader2 = require('readline').createInterface({
   input: require('fs').createReadStream('simc.csv')
 });
-
 
 lineReader2.on('line', function (line) {
   var tokens = line.split(';');
@@ -58,10 +48,6 @@ lineReader2.on('line', function (line) {
     if (!_.isEmpty(lvl[tokens[2]])) {
       lvl = lvl[tokens[2]];
       step = 2;
-      // if (!_.isEmpty(lvl.rodz[tokens[3]])) {
-      //   lvl = lvl.rodz[tokens[3]];
-      //   step = 3;
-      // }
     }
   }
 
@@ -80,7 +66,6 @@ lineReader2.on('close', function () {
     }
 
     console.log("The file was saved!");
-    console.log(db['02']['03']['01']);
   });
 })
 
