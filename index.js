@@ -26,9 +26,6 @@ lineReader.on('line', function (line) {
   }
 
   lvl.name = tokens[4];
-  if (step == 2) {
-    lvl.mie = [];
-  }
 
   db = _.merge(db, a);
 });
@@ -52,10 +49,9 @@ lineReader2.on('line', function (line) {
   }
 
   if (step == 2) {
-    var b = {
+    lvl[tokens[7]] = {
       name: tokens[6],
     };
-    lvl.mie.push(b);
   }
 });
 

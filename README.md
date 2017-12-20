@@ -16,15 +16,15 @@ W folderze muszą być pliki terc.csv i simc.csv.
 ## Struktura
 ```
 {
-  woj: { // województwa
+  WOJ: { // województwa
     name: '',
-    pow: { // powiaty
+    POW: { // powiaty
       name: '',
-      gmi: {  // gminy
+      GMI: {  // gminy
         name: '',
-        mie: [ // lista miejscowości
-          { name: '' },
-        ]
+        SYM: { // miejscowości
+          name: '',
+        }
       }
     }
   }
@@ -41,21 +41,17 @@ W folderze muszą być pliki terc.csv i simc.csv.
       "name": "aleksandrowski",
       "01": {
         "name": "Aleksandrów Kujawski",
-        "mie": [
-          {
-            "name": "Aleksandrów Kujawski"
-          },
-          ...
-        ]
+        "0985384": {
+          "name": "Aleksandrów Kujawski"
+        },
+        ...
       },
       "02": {
         "name": "Ciechocinek",
-        "mie": [
-          {
-            "name": "Ciechocinek"
-          },
-          ...
-        ]
+        "0985616": {
+          "name": "Ciechocinek"
+        },
+        ...
       },
       ...
     },
